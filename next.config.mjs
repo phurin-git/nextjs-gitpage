@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     basePath: '/static-export-nextjs',
-    assetPrefix: '/static-export-nextjs/',
-    images: {
-        loader: 'akamai',
-        path: ''
-    },
+    assetPrefix: '/static-export-nextjs',
     output: 'export',
     distDir: 'docs',
 };
