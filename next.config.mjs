@@ -2,6 +2,10 @@
 const nextConfig = {
     basePath: '/static-export-nextjs',
     assetPrefix: '/static-export-nextjs/',
+    images: {
+        loader: 'akamai',
+        path: ''
+    },
     output: 'export',
     distDir: 'docs',
 };
