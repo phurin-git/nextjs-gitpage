@@ -3,11 +3,8 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = isProd ? {
-    env: {
-        BASE_URL: '/static-export-nextjs',
-    },
-    basePath: process.env.BASE_URL,
-    assetPrefix: process.env.BASE_URL,
+    basePath: '/static-export-nextjs',
+    assetPrefix: '/static-export-nextjs',
     output: 'export',
     distDir: 'docs',
 } : {};
