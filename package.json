@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "echo > ./docs/nojekyll",
     "start": "npx serve@latest docs",
     "lint": "next lint"
   },
