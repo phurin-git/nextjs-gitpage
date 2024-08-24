@@ -3,24 +3,24 @@ import { execSync } from 'child_process';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const getRepoName = () => {
+const getrepoPath = () => {
     try {
         const repoUrl = execSync('git config --get remote.origin.url').toString().trim();
-        const repoName = repoUrl.split('/').pop().replace('.git', '');
-        return repoName;
+        const repoPath = repoUrl.split('/').pop().replace('.git', '');
+        return repoPath;
     } catch (error) {
         console.error('Error getting repository name:', error);
         return '';
     }
 };
 
-const repoName = getRepoName();
+const repoPath = getrepoPath();
 const nextConfig = isProd ? {
     env: {
-        BASE_URL: `/${repoName}`,
+        BASE_URL: `/${repoPath}`,
     },
-    basePath: `/${repoName}`,
-    assetPrefix: `/${repoName}`,
+    basePath: `/${repoPath}`,
+    assetPrefix: `/${repoPath}`,
     output: 'export',
     distDir: 'docs',
 } : {};
